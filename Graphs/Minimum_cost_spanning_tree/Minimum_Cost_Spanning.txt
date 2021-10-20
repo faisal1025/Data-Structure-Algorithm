@@ -1,0 +1,12 @@
+Definitions -
+
+Spanning Tree :
+    A spanning tree is made up of a single component graph in which if there are N nodes
+and e edges in a graph then it's spanning tree must having N nodes and N-1 edges and
+must not form any cycle.                     
+
+Minimum Cost Spanning Tree : 
+    Minimum cost spanning tree is a spannig tree(no cycle) having minimum cost than 
+other spanning trees of the same graph.
+
+
