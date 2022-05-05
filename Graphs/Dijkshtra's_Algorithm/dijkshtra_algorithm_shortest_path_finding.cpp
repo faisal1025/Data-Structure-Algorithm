@@ -6,7 +6,7 @@ vector<int> dijkstra(int v, vector<pair<int, int> > adj[], int s){
     vector<bool> visited(v, false);
     dist[s] = 0;
     priority_queue<pair<int, int>, vector<pair<int, int> > , greater<pair<int, int>> > pq;
-    pq.push(make_pair(s, 0));
+    pq.push(make_pair(0, s));
     // Time Complexity : O(N + E log N) ~= O(N log N)
     while(!pq.empty()){
         auto p = pq.top();
@@ -23,7 +23,7 @@ vector<int> dijkstra(int v, vector<pair<int, int> > adj[], int s){
             int adjWt = adjNodePair.second;
             if(visited[adjNode] == false and dist[adjNode] > currWt+adjWt){
                 dist[adjNode] = currWt+adjWt;
-                pq.push(make_pair(adjNode, currWt+adjWt));
+                pq.push(make_pair(currWt+adjWt, adjNode));
             }
         }
     }
